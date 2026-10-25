@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darmon Deli | Restaurant &amp; Deli on Sycamore Road, Amersham</title>
+  <meta name="description" content="Darmon Deli is a cosy, family-run restaurant at 104 Sycamore Road, Amersham. A short, seasonal menu, homemade desserts and a warm welcome. Call 01494 432806 to book.">
+  <meta name="theme-color" content="#c4221b">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Darmon Deli">
+  <meta property="og:title" content="Darmon Deli | Amersham">
+  <meta property="og:description" content="A cosy restaurant on Sycamore Road, Amersham. Seasonal plates, homemade desserts and a warm welcome.">
+  <meta property="og:image" content="/assets/img/og.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Darmon Deli",
+    "image": "/assets/img/storefront.jpg",
+    "telephone": "+44 1494 432806",
+    "servesCuisine": ["French", "International"],
+    "acceptsReservations": "True",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "104 Sycamore Road",
+      "addressLocality": "Amersham",
+      "addressRegion": "Buckinghamshire",
+      "postalCode": "HP6 5EN",
+      "addressCountry": "GB"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 51.6785188, "longitude": -0.6049673 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday", "Saturday"], "opens": "12:00", "closes": "14:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday", "Saturday"], "opens": "18:00", "closes": "22:00" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/darmondeli/",
+      "https://www.instagram.com/darmondeli/",
+      "https://www.tripadvisor.co.uk/Restaurant_Review-g499482-d20060055-Reviews-Darmon_Deli-Amersham_Buckinghamshire_England.html"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Darmon Deli, back to top">
+        <span class="brand-name">Darmon</span>
+        <span class="brand-sub">deli</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm header-cta" href="tel:+441494432806">Book a table</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!--
+    The mobile drawer sits outside <header> on purpose. A position:fixed element
+    inside a parent with transform, filter or backdrop-filter is positioned
+    relative to that parent instead of the viewport, which is what usually
+    makes a sidebar look clipped or see-through. Its background is a solid
+    colour, never a translucent one.
+  -->
+  <div class="drawer-scrim" data-drawer-close hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile menu" inert>
+    <div class="drawer-head">
+      <span class="brand brand-drawer">
+        <span class="brand-name">Darmon</span>
+        <span class="brand-sub">deli</span>
+      </span>
+      <button class="drawer-close" type="button" data-drawer-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+    <div class="drawer-foot">
+      <a class="btn btn-primary btn-block" href="tel:+441494432806">Call 01494 432806</a>
+      <p class="drawer-address">104 Sycamore Road<br>Amersham HP6 5EN</p>
+      <div class="social">
+        <a href="https://www.instagram.com/darmondeli/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/darmondeli/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g499482-d20060055-Reviews-Darmon_Deli-Amersham_Buckinghamshire_England.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="13.5" r="1.2" fill="currentColor"/><circle cx="16.5" cy="13.5" r="1.2" fill="currentColor"/><path d="M3 9.2h3.2C7.8 7.6 9.8 6.8 12 6.8s4.2.8 5.8 2.4H21l-1.6 2M3 9.2l1.6 2M12 17.3l-1-1.3m1 1.3l1-1.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Restaurant &amp; deli &middot; Amersham</p>
+          <h1>A small, much-loved kitchen on Sycamore Road</h1>
+          <p class="lede">An intimate dining room serving a short, seasonal menu of French-inspired and well-travelled dishes, with every dessert made in house.</p>
+
+          <p class="status" data-open-status hidden>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-text"></span>
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+441494432806">Call to book</a>
+            <a class="btn btn-ghost" href="#visit">Hours &amp; directions</a>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <img src="/assets/img/storefront.jpg" width="387" height="516" alt="The red shopfront of Darmon at 104 Sycamore Road, lit up in the evening, with bistro chairs outside" fetchpriority="high">
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="proof" aria-label="Highlights">
+          <li>
+            <span class="proof-figure">4.9<span class="star" aria-hidden="true">&#9733;</span></span>
+            <span class="proof-label">on Tripadvisor</span>
+          </li>
+          <li>
+            <span class="proof-figure">#1</span>
+            <span class="proof-label">restaurant in Amersham on Tripadvisor</span>
+          </li>
+          <li>
+            <span class="proof-figure">Since 2020</span>
+            <span class="proof-label">family-run on Sycamore Road</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <figure class="about-media">
+          <img src="/assets/img/interior.jpg" width="658" height="303" loading="lazy" alt="Inside Darmon: navy leather banquettes, lamplit wooden tables, botanical wallpaper and a tall palm">
+        </figure>
+        <div class="about-copy">
+          <p class="eyebrow">Our story</p>
+          <h2>Cosy, chic and a little bit Gallic</h2>
+          <p>Darmon opened its doors in March 2020, days before the first lockdown, and has since become one of Amersham's favourite places to eat. Behind the red shopfront you'll find deep navy banquettes, botanical wallpaper and lamplit tables, with Eldad and the team looking after you.</p>
+          <p>The menu is deliberately short and changes regularly, built around what's in season. The cakes, tarts and patisserie are all made in our own kitchen.</p>
+          <ul class="features">
+            <li>Short, seasonal menu that changes often</li>
+            <li>Homemade desserts &amp; patisserie</li>
+            <li>Vegetarian and vegan options</li>
+            <li>Takeaway available, just call ahead</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">From the kitchen</p>
+          <h2>Dishes our guests keep coming back for</h2>
+          <p>Our menu changes with the seasons, so not everything below will be on every day. For today's dishes, follow us on <a href="https://www.instagram.com/darmondeli/" target="_blank" rel="noopener">Instagram</a> or give us a ring.</p>
+        </div>
+
+        <div class="menu-grid">
+          <figure class="menu-media">
+            <img src="/assets/img/dish.jpg" width="480" height="640" loading="lazy" alt="A flatbread topped with spiced chicken, crispy potatoes, herb yoghurt, pickled red onion and coriander, with a salad behind">
+          </figure>
+
+          <div class="menu-lists">
+            <div class="menu-col">
+              <h3>Plates</h3>
+              <ul class="menu-list">
+                <li><span class="dish">Vietnamese beef bún</span><span class="note">rice noodles, herbs</span></li>
+                <li><span class="dish">Aubergine katsu curry</span><span class="note">vegetarian</span></li>
+                <li><span class="dish">Chicken katsu</span></li>
+                <li><span class="dish">Fish stew</span></li>
+                <li><span class="dish">Steak, sauce bordelaise</span></li>
+                <li><span class="dish">Schnitzel burger</span></li>
+                <li><span class="dish">Croque monsieur</span></li>
+              </ul>
+            </div>
+            <div class="menu-col">
+              <h3>Sweet things</h3>
+              <ul class="menu-list">
+                <li><span class="dish">Lemon meringue pie</span></li>
+                <li><span class="dish">Tarte tatin</span></li>
+                <li><span class="dish">Pear, chocolate &amp; almond tart</span></li>
+                <li><span class="dish">Cheesecake</span></li>
+                <li><span class="dish">French macarons</span></li>
+                <li><span class="dish">Moroccan pastries</span></li>
+              </ul>
+            </div>
+            <p class="menu-foot">Please tell us about any allergies or dietary needs when you book. We're always happy to help.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head section-head-light">
+          <p class="eyebrow">Kind words</p>
+          <h2>What our guests say</h2>
+        </div>
+
+        <div class="review-grid">
+          <figure class="review">
+            <blockquote>&ldquo;An intimate 30 seat restaurant that exudes a cosy homely feel.&rdquo;</blockquote>
+            <figcaption>Guest review</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>&ldquo;The menu was reassuringly small with really lovely and well considered seasonally appropriate dishes.&rdquo;</blockquote>
+            <figcaption>Guest review</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>&ldquo;Desserts selection also very impressive, all homemade and fresh.&rdquo;</blockquote>
+            <figcaption>Guest review</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>&ldquo;Consistently delicious food!&rdquo;</blockquote>
+            <figcaption>Tripadvisor review</figcaption>
+          </figure>
+        </div>
+
+        <div class="review-links">
+          <a class="btn btn-light" href="https://www.tripadvisor.co.uk/Restaurant_Review-g499482-d20060055-Reviews-Darmon_Deli-Amersham_Buckinghamshire_England.html" target="_blank" rel="noopener">Read reviews on Tripadvisor</a>
+          <a class="btn btn-outline-light" href="https://www.google.com/maps/place/Darmon+Deli/@51.6785188,-0.6049673,17z/data=!4m6!3m5!1s0x4876679b635c8a7f:0xc6d75c1e1b6dec40!8m2!3d51.6785188!4d-0.6049673!16s%2Fg%2F11j0j8d5xz" target="_blank" rel="noopener">Reviews on Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info">
+          <p class="eyebrow">Visit us</p>
+          <h2>Find us on Sycamore Road</h2>
+
+          <div class="visit-block">
+            <h3>Opening hours</h3>
+            <table class="hours">
+              <caption class="visually-hidden">Opening hours</caption>
+              <tbody>
+                <tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr data-day="2" class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr>
+                <tr data-day="3" class="closed"><th scope="row">Wednesday</th><td>Closed</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>12&ndash;2:30pm<br>6&ndash;10pm</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>12&ndash;2:30pm<br>6&ndash;10pm</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>12&ndash;2:30pm<br>6&ndash;10pm</td></tr>
+                <tr data-day="0"><th scope="row">Sunday</th><td>12&ndash;3pm</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted">Hours can change on bank holidays. If in doubt, give us a call.</p>
+          </div>
+
+          <div class="visit-block visit-contact">
+            <div>
+              <h3>Address</h3>
+              <address>104 Sycamore Road<br>Amersham<br>Buckinghamshire HP6 5EN</address>
+              <p class="small muted">A few minutes' walk from Amersham station.</p>
+            </div>
+            <div>
+              <h3>Bookings</h3>
+              <p><a class="link-strong" href="tel:+441494432806">01494 432806</a></p>
+              <p class="small muted">We're a small room, so booking is recommended, especially on Friday and Saturday evenings.</p>
+            </div>
+          </div>
+
+          <div class="visit-actions">
+            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Darmon+Deli%2C+104+Sycamore+Rd%2C+Amersham+HP6+5EN" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+441494432806">Call us</a>
+          </div>
+        </div>
+
+        <div class="visit-map">
+          <iframe
+            title="Map showing Darmon Deli at 104 Sycamore Road, Amersham"
+            src="https://maps.google.com/maps?q=Darmon%20Deli%2C%20104%20Sycamore%20Rd%2C%20Amersham%20HP6%205EN&amp;z=16&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="#top" aria-label="Darmon Deli, back to top">
+          <span class="brand-name">Darmon</span>
+          <span class="brand-sub">deli</span>
+        </a>
+        <p class="footer-tag">Seasonal cooking &amp; homemade patisserie in Amersham.</p>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <p>104 Sycamore Road<br>Amersham HP6 5EN</p>
+        <p><a href="tel:+441494432806">01494 432806</a></p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>Thu&ndash;Sat: 12&ndash;2:30pm, 6&ndash;10pm<br>Sun: 12&ndash;3pm<br>Mon&ndash;Wed: closed</p>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <div class="social social-footer">
+          <a href="https://www.instagram.com/darmondeli/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/darmondeli/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g499482-d20060055-Reviews-Darmon_Deli-Amersham_Buckinghamshire_England.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="13.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="13.5" r="1.2" fill="currentColor"/><circle cx="16.5" cy="13.5" r="1.2" fill="currentColor"/><path d="M3 9.2h3.2C7.8 7.6 9.8 6.8 12 6.8s4.2.8 5.8 2.4H21l-1.6 2M3 9.2l1.6 2M12 17.3l-1-1.3m1 1.3l1-1.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="small">@darmondeli</p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>&copy; <span data-year>2026</span> Darmon Deli, Amersham</p>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+</body>
+</html>

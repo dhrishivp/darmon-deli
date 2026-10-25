@@ -678,66 +678,239 @@ address {
 
 /* Menu ------------------------------------------------------------------ */
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
+.menu-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 2.5rem;
+  padding: 0 0 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.menu-media {
-  margin: 0;
-  position: sticky;
-  top: calc(var(--header-h) + 24px);
+.menu-tabs::-webkit-scrollbar {
+  display: none;
 }
 
-.menu-media img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.menu-tabs[hidden] {
+  display: none;
 }
 
-.menu-lists {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.5rem 3rem;
+.menu-tab {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0.6rem 1.3rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 600 0.95rem/1 var(--font-body);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.menu-col h3 {
-  padding-bottom: 0.6rem;
+.menu-tab:hover {
+  border-color: var(--ink);
+}
+
+.menu-tab[aria-selected="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.menu-panel + .menu-panel {
+  margin-top: 3.5rem;
+}
+
+.menu-panel:focus-visible {
+  outline-offset: 8px;
+}
+
+/* Without JavaScript every panel shows with its own title. Once tabs are
+   active only one panel shows at a time and the tab names it instead. */
+.panel-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  padding-bottom: 0.75rem;
   border-bottom: 1.5px solid var(--ink);
 }
 
-.menu-list {
+.menu.has-tabs .panel-title {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.menu.has-tabs .menu-panel + .menu-panel {
+  margin-top: 0;
+}
+
+.menu-panel[hidden] {
+  display: none;
+}
+
+.menu-cols {
+  columns: 2;
+  column-gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.menu-group {
+  break-inside: avoid;
+  margin-bottom: 2.75rem;
+}
+
+.menu-group h3 {
+  margin-bottom: 0.25rem;
+  color: var(--red);
+}
+
+.menu-note {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.mi-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.menu-list li {
-  display: flex;
-  flex-direction: column;
-  padding: 0.85rem 0;
-  border-bottom: 1px dashed var(--line);
+.mi {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.dish {
+.mi:last-child {
+  border-bottom: 0;
+}
+
+.mi-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.mi-name {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.25;
 }
 
-.note {
-  font-size: 0.88rem;
+.mi-dots {
+  flex: 1 1 auto;
+  min-width: 1rem;
+  border-bottom: 1.5px dotted #c9bba5;
+  transform: translateY(-0.3em);
+}
+
+/* Dishes priced on the day have no price, so no leader dots either. */
+.mi-dots:last-child {
+  display: none;
+}
+
+.mi-price {
+  flex: 0 0 auto;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.mi-desc {
+  margin: 0.25rem 0 0;
+  max-width: 34rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  vertical-align: 0.25em;
+  color: #3f7a4f;
+  cursor: help;
+}
+
+.tag-pop {
+  border-color: var(--red);
+  background: var(--red);
+  color: var(--white);
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.menu-foot .tag {
+  margin-left: 0;
+}
+
+.wine {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wine th,
+.wine td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: baseline;
+}
+
+.wine thead th {
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wine tbody th {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.wine td,
+.wine thead th + th {
+  width: 5.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.wine td {
+  font-weight: 600;
+}
+
+.wine tbody tr:last-child th,
+.wine tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.wine-grape {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
   color: var(--muted);
 }
 
 .menu-foot {
-  grid-column: 1 / -1;
-  margin: 0;
+  margin: 0.5rem 0 0;
   padding: 1.1rem 1.25rem;
   border-left: 3px solid var(--red);
   background: var(--paper);
@@ -754,7 +927,7 @@ address {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(0.75rem, 2vw, 1.25rem);
 }
 
@@ -1046,7 +1219,6 @@ address {
 
   .hero-grid,
   .about-grid,
-  .menu-grid,
   .visit-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1055,9 +1227,12 @@ address {
     max-width: 340px;
   }
 
-  .menu-media {
-    position: static;
-    max-width: 420px;
+  .menu-cols {
+    columns: 1;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer-grid {
@@ -1097,9 +1272,7 @@ address {
     border-top: 1px solid var(--line);
   }
 
-  .menu-lists,
   .review-grid,
-  .gallery-grid,
   .visit-contact,
   .footer-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -1109,8 +1282,14 @@ address {
     grid-column: auto;
   }
 
-  .gallery img {
-    aspect-ratio: 4 / 3;
+  .menu-tabs {
+    gap: 0.4rem;
+  }
+
+  .menu-tab {
+    flex: 1 1 0;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.9rem;
   }
 
   .visit-map,

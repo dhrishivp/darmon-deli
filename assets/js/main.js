@@ -131,6 +131,50 @@
     });
   }
 
+  /* Menu tabs ---------------------------------------------------------- */
+
+  var menu = document.querySelector(".menu");
+  var tablist = menu && menu.querySelector("[role='tablist']");
+  if (tablist) {
+    var tabs = Array.prototype.slice.call(tablist.querySelectorAll("[role='tab']"));
+
+    var selectTab = function (tab, moveFocus, fromUser) {
+      tabs.forEach(function (t) {
+        var selected = t === tab;
+        t.setAttribute("aria-selected", selected ? "true" : "false");
+        t.tabIndex = selected ? 0 : -1;
+        var panel = document.getElementById(t.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !selected;
+      });
+      if (moveFocus) tab.focus();
+      // Keep the chosen tab visible when the row scrolls on small screens.
+      if (fromUser && tab.scrollIntoView && tablist.scrollWidth > tablist.clientWidth) {
+        tab.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+    };
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () {
+        selectTab(tab, false, true);
+      });
+      tab.addEventListener("keydown", function (e) {
+        var next = null;
+        if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+        else if (e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === "Home") next = tabs[0];
+        else if (e.key === "End") next = tabs[tabs.length - 1];
+        if (next) {
+          e.preventDefault();
+          selectTab(next, true, true);
+        }
+      });
+    });
+
+    tablist.hidden = false;
+    menu.classList.add("has-tabs");
+    selectTab(tabs[0], false);
+  }
+
   /* Opening hours ------------------------------------------------------ */
 
   // Minutes after midnight, UK time. 0 = Sunday.

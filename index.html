@@ -33,6 +33,8 @@
     "telephone": "+44 1494 432806",
     "servesCuisine": ["French", "International"],
     "acceptsReservations": "True",
+    "hasMenu": "/#menu",
+    "priceRange": "££",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "104 Sycamore Road",
@@ -130,7 +132,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Restaurant &amp; deli &middot; Amersham</p>
           <h1>A small, much-loved kitchen on Sycamore Road</h1>
-          <p class="lede">An intimate dining room serving a short, seasonal menu of French-inspired and well-travelled dishes, with every dessert made in house.</p>
+          <p class="lede">An intimate French bistro serving classic plates, homemade bread and daily specials from the board, with every pâtisserie made in house.</p>
 
           <p class="status" data-open-status hidden>
             <span class="status-dot" aria-hidden="true"></span>
@@ -176,11 +178,11 @@
           <p class="eyebrow">Our story</p>
           <h2>Cosy, chic and a little bit Gallic</h2>
           <p>Darmon opened its doors in March 2020, days before the first lockdown, and has since become one of Amersham's favourite places to eat. Behind the red shopfront you'll find deep navy banquettes, botanical wallpaper and lamplit tables, with Eldad and the team looking after you.</p>
-          <p>The menu is deliberately short and changes regularly, built around what's in season. The cakes, tarts and patisserie are all made in our own kitchen.</p>
+          <p>Lunch brings French toasties, burgers on our own bread and bistro mains. In the evening the board takes over, with a meat, fish and vegetarian dish of the day. The pâtisseries are all made in our own kitchen with pure butter.</p>
           <ul class="features">
-            <li>Short, seasonal menu that changes often</li>
-            <li>Homemade desserts &amp; patisserie</li>
-            <li>Vegetarian and vegan options</li>
+            <li>Bistro classics plus daily <em>du jour</em> specials</li>
+            <li>Homemade bread, desserts &amp; pâtisserie</li>
+            <li>Vegetarian and gluten-free options</li>
             <li>Takeaway available, just call ahead</li>
           </ul>
         </div>
@@ -191,44 +193,465 @@
     <section class="section menu" id="menu">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">From the kitchen</p>
-          <h2>Dishes our guests keep coming back for</h2>
-          <p>Our menu changes with the seasons, so not everything below will be on every day. For today's dishes, follow us on <a href="https://www.instagram.com/darmondeli/" target="_blank" rel="noopener">Instagram</a> or give us a ring.</p>
+          <p class="eyebrow">Menu</p>
+          <h2>Bistro classics, homemade bread and daily specials</h2>
+          <p>Our menu follows the seasons, and the <em>du jour</em> dishes change daily. Look out for them on the board when you visit.</p>
         </div>
 
-        <div class="menu-grid">
-          <figure class="menu-media">
-            <img src="/assets/img/dish.jpg" width="480" height="640" loading="lazy" alt="A flatbread topped with spiced chicken, crispy potatoes, herb yoghurt, pickled red onion and coriander, with a salad behind">
-          </figure>
+        <div class="menu-tabs" role="tablist" aria-label="Menu sections" hidden>
+          <button class="menu-tab" type="button" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="true">Food</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" tabindex="-1">Desserts</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false" tabindex="-1">Drinks</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-wine" aria-controls="panel-wine" aria-selected="false" tabindex="-1">Wine</button>
+        </div>
 
-          <div class="menu-lists">
-            <div class="menu-col">
-              <h3>Plates</h3>
-              <ul class="menu-list">
-                <li><span class="dish">Vietnamese beef bún</span><span class="note">rice noodles, herbs</span></li>
-                <li><span class="dish">Aubergine katsu curry</span><span class="note">vegetarian</span></li>
-                <li><span class="dish">Vegetable curry laksa</span><span class="note">vegan</span></li>
-                <li><span class="dish">Chicken katsu</span></li>
-                <li><span class="dish">Fish stew</span></li>
-                <li><span class="dish">Steak, sauce bordelaise</span></li>
-                <li><span class="dish">Schnitzel burger</span></li>
-                <li><span class="dish">Croque monsieur</span></li>
-              </ul>
+        <div class="menu-panels">
+          <div class="menu-panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food" tabindex="0">
+            <h3 class="panel-title">Food</h3>
+            <div class="menu-cols">
+              <div class="menu-group">
+                <h3>Starters</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Chicken Pastilla</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£8.00</span>
+                    </div>
+                    <p class="mi-desc">Moroccan pastry filled with roasted chicken, onion, almond, coriander and raisins, topped with toasted almonds, cinnamon and icing sugar</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Soupe à l&#x27;Oignon</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.00</span>
+                    </div>
+                    <p class="mi-desc">Caramelised onion stew with beef stock, served with gratinated Emmental on a sourdough crouton</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Mushroom &amp; Truffle Arancini <abbr class="tag" title="Vegetarian">V</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.50</span>
+                    </div>
+                    <p class="mi-desc">White wine and mushroom rice ball filled with Chaource cheese, served with a Parmesan and truffle cream</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Entrée du jour</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                    </div>
+                    <p class="mi-desc">A daily dish made with local, seasonal produce. See today&#x27;s selection on the board</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Lunch sandwiches</h3>
+                <p class="menu-note">All our sandwiches are served in our homemade bread</p>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Croque Monsieur <span class="tag tag-pop">Popular</span></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£13.50</span>
+                    </div>
+                    <p class="mi-desc">Traditional French toastie served with a light salad. Contains nuts and seeds</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Beef Burger <span class="tag tag-pop">Popular</span></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£12.00</span>
+                    </div>
+                    <p class="mi-desc">Beef patty, Emmental, tomato, lettuce, onion and green peppercorn sauce</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Schnitzel Burger <span class="tag tag-pop">Popular</span></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£11.50</span>
+                    </div>
+                    <p class="mi-desc">Breaded chicken, tomato, lettuce, onion and harissa mayonnaise</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Veggie Burger <abbr class="tag" title="Vegetarian">V</abbr> <span class="tag tag-pop">Popular</span></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£10.50</span>
+                    </div>
+                    <p class="mi-desc">Breaded aubergine, grilled halloumi, lettuce and tapenade mayonnaise</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Lunch mains</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Quiche du jour <abbr class="tag" title="Vegetarian">V</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£14.50</span>
+                    </div>
+                    <p class="mi-desc">A daily traditional quiche, served with our salad of the day</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Chèvre Chaud au Miel <abbr class="tag" title="Vegetarian">V</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£12.50</span>
+                    </div>
+                    <p class="mi-desc">Grilled goat&#x27;s cheese on toast with a drizzle of honey, on mixed leaves with beetroot, walnuts and our homemade honey vinaigrette</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Galette Complète <abbr class="tag" title="Vegetarian">V</abbr> <abbr class="tag" title="Gluten free">GF</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£15.50</span>
+                    </div>
+                    <p class="mi-desc">Brittany&#x27;s classic buckwheat pancake filled with Emmental, mushroom, white wine and cream, topped with a fried egg and served with green salad</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Vietnamese Rice Noodles <abbr class="tag" title="Gluten free">GF</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£15.50</span>
+                    </div>
+                    <p class="mi-desc">Hot and cold salad of lettuce, fresh mint and coriander with rice noodles, pickled carrots, bean sprouts, peanuts and our homemade sauce</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>All-day grill</h3>
+                <p class="menu-note">Served with French fries and green salad. Contains nuts and seeds</p>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Le Filet de Bœuf</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£29.50</span>
+                    </div>
+                    <p class="mi-desc">Beef fillet (170g)</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">L&#x27;Entrecôte</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£26.50</span>
+                    </div>
+                    <p class="mi-desc">Sirloin steak (227g)</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Evening mains</h3>
+                <p class="menu-note">See today&#x27;s selection on the board</p>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Plat du jour</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                    </div>
+                    <p class="mi-desc">A daily meat dish, freshly prepared with local, seasonal produce</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Poisson du jour</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                    </div>
+                    <p class="mi-desc">A daily fish or seafood dish, freshly prepared with local, seasonal produce</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Végétarien du jour <abbr class="tag" title="Vegetarian">V</abbr></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                    </div>
+                    <p class="mi-desc">A daily vegetarian dish, freshly prepared with local, seasonal produce</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="menu-col">
-              <h3>Sweet things</h3>
-              <ul class="menu-list">
-                <li><span class="dish">Lemon meringue pie</span></li>
-                <li><span class="dish">Tarte tatin</span></li>
-                <li><span class="dish">Pear, chocolate &amp; almond tart</span></li>
-                <li><span class="dish">Cheesecake</span></li>
-                <li><span class="dish">French macarons</span></li>
-                <li><span class="dish">Moroccan pastries</span></li>
-              </ul>
+          </div>
+          <div class="menu-panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" tabindex="0">
+            <h3 class="panel-title">Desserts</h3>
+            <div class="menu-cols">
+              <div class="menu-group">
+                <h3>Desserts</h3>
+                <p class="menu-note">Made in our own kitchen</p>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Pâtisseries du jour</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£8.50</span>
+                    </div>
+                    <p class="mi-desc">All our pâtisseries are homemade with pure butter. Take a look at the counter</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Profiteroles <span class="tag tag-pop">Popular</span></span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.00</span>
+                    </div>
+                    <p class="mi-desc">Choux pastry with crème pâtissière, Chantilly cream and chocolate sauce</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Coupe du jour</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.50</span>
+                    </div>
+                    <p class="mi-desc">A daily selection of homemade sorbet or ice cream, with a biscuit</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <p class="menu-foot">Please tell us about any allergies or dietary needs when you book. We're always happy to help.</p>
+          </div>
+          <div class="menu-panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" tabindex="0">
+            <h3 class="panel-title">Drinks</h3>
+            <div class="menu-cols">
+              <div class="menu-group">
+                <h3>Hot drinks</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Espresso</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£3.00</span>
+                    </div>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Americano</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£3.50</span>
+                    </div>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Café au Lait</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£3.50</span>
+                    </div>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Cafetière</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£4.00</span>
+                    </div>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Tea &amp; herbal</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£4.00</span>
+                    </div>
+                    <p class="mi-desc">English Breakfast, Earl Grey, Chai, Rooibos, Green Tea, Peppermint, Lemon &amp; Ginger, Hibiscus, Chamomile</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Soft drinks</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Fizzy drinks</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£4.00</span>
+                    </div>
+                    <p class="mi-desc">Ginger Beer (40cl), Diet Coke, Rose Lemonade, Appletiser, Indian Tonic</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Fruit juices</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£3.50</span>
+                    </div>
+                    <p class="mi-desc">Apple, Peach, Pear</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Sparkling water</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£2.50</span>
+                    </div>
+                    <p class="mi-desc">50cl</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Beer &amp; cider</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Beer</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£5.50</span>
+                    </div>
+                    <p class="mi-desc">Moretti (25cl), Leffe Blonde (25cl)</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Cider</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£6.50</span>
+                    </div>
+                    <p class="mi-desc">Weston&#x27;s Vintage Cider (50cl)</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Aperitifs &amp; cocktails</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Aperitifs</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£8.50</span>
+                    </div>
+                    <p class="mi-desc">Aperol Spritz, Martini Rosso, Campari, Crémant, Pastis</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Kir Royal</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.00</span>
+                    </div>
+                    <p class="mi-desc">Crémant, crème de mûre</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Gin &amp; Tonic</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.50</span>
+                    </div>
+                    <p class="mi-desc">Bombay Sapphire, Indian tonic</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">French 75</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£10.50</span>
+                    </div>
+                    <p class="mi-desc">Bombay Sapphire, Crémant, lemon, sugar syrup</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Negroni</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£12.50</span>
+                    </div>
+                    <p class="mi-desc">Bombay Sapphire, Campari, Martini Rosso</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-group">
+                <h3>Digestifs</h3>
+                <ul class="mi-list">
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Liqueurs &amp; port</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£8.50</span>
+                    </div>
+                    <p class="mi-desc">Baileys, Amaretto, Cointreau, Port</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Vodka</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£9.00</span>
+                    </div>
+                    <p class="mi-desc">Stolichnaya</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Whisky</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£10.00</span>
+                    </div>
+                    <p class="mi-desc">Lagavulin 16 Year Old</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Cognac VSOP</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£11.50</span>
+                    </div>
+                    <p class="mi-desc">Camus, single estate</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Eau de vie</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£13.00</span>
+                    </div>
+                    <p class="mi-desc">Calvados, Old Prune, Poire Williams</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Bas-Armagnac</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£16.50</span>
+                    </div>
+                    <p class="mi-desc">Delord 25 Year Old</p>
+                  </li>
+                  <li class="mi">
+                    <div class="mi-head">
+                      <span class="mi-name">Cognac XO</span>
+                      <span class="mi-dots" aria-hidden="true"></span>
+                      <span class="mi-price">£16.50</span>
+                    </div>
+                    <p class="mi-desc">Camus Borderies</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu-panel" id="panel-wine" role="tabpanel" aria-labelledby="tab-wine" tabindex="0">
+            <h3 class="panel-title">Wine</h3>
+            <div class="menu-cols">
+              <div class="menu-group">
+                <h3>Blanc</h3>
+                <table class="wine">
+                  <thead><tr><th scope="col"><span class="visually-hidden">Wine</span></th><th scope="col">Glass</th><th scope="col">Bottle</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">House White</th><td>£7.00</td><td>£32.00</td></tr>
+                    <tr><th scope="row">Mâcon-Villages<span class="wine-grape">Chardonnay</span></th><td>£9.50</td><td>£43.00</td></tr>
+                    <tr><th scope="row">Pouilly-Fumé<span class="wine-grape">Sauvignon Blanc</span></th><td>£10.50</td><td>£47.00</td></tr>
+                    <tr><th scope="row">Sauternes<span class="wine-grape">Dessert wine</span></th><td>£11.50</td><td><span aria-label="Not available by the bottle">&ndash;</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="menu-group">
+                <h3>Rosé</h3>
+                <table class="wine">
+                  <thead><tr><th scope="col"><span class="visually-hidden">Wine</span></th><th scope="col">Glass</th><th scope="col">Bottle</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">House Rosé</th><td>£7.00</td><td>£32.00</td></tr>
+                    <tr><th scope="row">Côtes de Provence</th><td>£8.50</td><td>£39.00</td></tr>
+                    <tr><th scope="row">Sancerre Rosé<span class="wine-grape">Pinot Noir</span></th><td>£10.50</td><td>£47.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="menu-group">
+                <h3>Rouge</h3>
+                <table class="wine">
+                  <thead><tr><th scope="col"><span class="visually-hidden">Wine</span></th><th scope="col">Glass</th><th scope="col">Bottle</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">House Red</th><td>£7.00</td><td>£32.00</td></tr>
+                    <tr><th scope="row">Wine of the Month</th><td>£9.00</td><td>£41.00</td></tr>
+                    <tr><th scope="row">Haut-Médoc<span class="wine-grape">Cabernet Sauvignon</span></th><td>£10.50</td><td>£47.00</td></tr>
+                    <tr><th scope="row">Hautes-Côtes de Beaune<span class="wine-grape">Pinot Noir</span></th><td><span aria-label="Not available by the glass">&ndash;</span></td><td>£59.00</td></tr>
+                    <tr><th scope="row">St-Émilion Grand Cru<span class="wine-grape">Merlot</span></th><td><span aria-label="Not available by the glass">&ndash;</span></td><td>£69.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
+
+        <p class="menu-foot"><abbr class="tag" title="Vegetarian">V</abbr> vegetarian &nbsp;&middot;&nbsp; <abbr class="tag" title="Gluten free">GF</abbr> gluten free. Please tell us about any allergies or dietary needs when you book or order, and we'll happily help.</p>
       </div>
     </section>
 
@@ -240,6 +663,9 @@
         </figure>
         <figure>
           <img src="/assets/img/pancakes.jpg" width="900" height="900" loading="lazy" alt="Pancakes topped with whipped cream, strawberries and blueberries in maple syrup, on a floral plate">
+        </figure>
+        <figure>
+          <img src="/assets/img/dish.jpg" width="480" height="640" loading="lazy" alt="A flatbread topped with spiced chicken, crispy potatoes, herb yoghurt, pickled red onion and coriander">
         </figure>
         <figure>
           <img src="/assets/img/lasagne.jpg" width="489" height="408" loading="lazy" alt="A layered vegetable bake with spinach and squash, topped with feta, peas and toasted seeds">
